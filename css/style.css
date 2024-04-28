@@ -1,0 +1,188 @@
+:root {
+    --PaleBlue: hsl(225, 100%, 94%);
+    --BrightBlue: hsl(245, 75%, 52%);
+
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --DesaturatedBlue: hsl(224, 23%, 55%);
+    --DarkBlue: hsl(223, 47%, 23%);
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (min-width: 768px) { 
+    body {
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-position: center 10%;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.main {
+    width: 90%;
+    max-width: 47rem;
+    height: 100vh;
+
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    background-color: var(--veryPaleBlue);
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0px 10px 16px 0px hsla(224, 23%, 55%, 0.7);
+}
+
+.hero {
+    background-image: url(../images/illustration-hero.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 25rem;
+
+}
+
+.details {
+    text-align: center;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+}
+
+.details__title {
+    color: var(--DarkBlue);
+    font-weight: 900;
+}
+
+.details__text {
+    line-height: 1.5;
+    color: var(--DesaturatedBlue);
+    font-weight: 500;
+}
+
+@media (min-width: 768px) { 
+    .details__text {
+        padding: 0 3rem;
+    }
+}
+
+.plan {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media (min-width: 768px) { 
+    .plan {
+        justify-content: space-around;
+    }
+}
+
+.plan__price {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) { 
+    .plan__price {
+        gap: 3rem;
+    }
+}
+
+.plan_actual-img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.price p {
+    margin: 0;
+}
+
+.price__title {
+    font-weight: 800;
+    color: var(--DarkBlue);
+
+}
+
+.price__actual {
+    color: var(--DesaturatedBlue);
+
+}
+
+.plan__change {
+    color: var(--BrightBlue);
+    font-weight: 700;
+    transition: .5s;
+}
+
+.plan__change:hover {
+    text-decoration: none;
+    color: var(--DarkBlue);
+}
+
+.btn__proceed {
+    display: block;
+    background-color: var(--BrightBlue);
+    padding: 1.5rem;
+    color: var(--veryPaleBlue);
+    text-decoration: none;
+    text-align: center;
+    margin: 4rem 3rem 1rem 3rem;
+    font-weight: 800;
+    border-radius: 1rem;
+    transition: background-color .3s;
+}
+
+.btn__proceed:hover {
+    background-color: var(--DarkBlue);
+}
+
+.btn__cancel-container {
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn__cancel {
+    display: inline-block;
+    text-decoration: none;
+    
+    color: var(--DesaturatedBlue);
+    text-align: center;
+    font-weight: 700;
+    margin: 2rem 0 3rem 0;
+    transition: color .3s ease;
+}
+
+.btn__cancel:hover {
+    color: var(--DarkBlue);
+}
